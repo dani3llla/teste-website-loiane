@@ -1,0 +1,431 @@
+  /* Google Fonts - Poppins */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    min-height: 100%;
+    background: whitesmoke;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  background: #B5227D;
+background: linear-gradient(270deg, rgba(181, 34, 125, 1) 0%, rgba(53, 3, 81, 1) 100%);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+
+
+  nav .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+  }
+
+  .logo .menu-icon {
+    color: whitesmoke;
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+  }
+
+  .logo .logo-name {
+    margin-top: 10px;
+    color: #333;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  nav .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 260px;
+    padding: 2px 0;
+    background-color: whitesmoke;
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 1000;
+  }
+
+  nav.open .sidebar {
+    left: 0;
+  }
+
+  .sidebar .sidebar-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px 16px;
+  }
+
+  .sidebar-content .list {
+    list-style: none;
+  }
+
+  nav .sidebar {
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .list .nav-link {
+    display: flex;
+    align-items: center;
+    margin: 1px 0;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .lists .nav-link:hover {
+    background-color: #b840f4;
+  }
+
+  .nav-link .icon {
+    margin-right: 14px;
+    font-size: 20px;
+    color: #707070;
+  }
+
+  .nav-link .link {
+    font-size: 16px;
+    color: #707070;
+    font-weight: 400;
+  }
+
+  .lists .nav-link:hover .icon,
+  .lists .nav-link:hover .link {
+    color: #fff;
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px;
+    gap: 60px;
+  }
+
+  .info-curso {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .tag {
+    color: black;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  .descricao {
+    font-size: 1.2rem;
+    margin: 10px 0 30px;
+  }
+
+  .botao {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #380557;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .botao:hover {
+    background-color: #300346;
+  }
+
+
+  .detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .detalhes div {
+    background-color: rgba(0, 0, 0, 0.414);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 140px;
+    text-align: center;
+    font-size: 0.95rem;
+    width: 40px;
+  }
+
+  .loianecursos {
+    width: 150px;
+  }
+
+  .bemvindoc {
+    padding: 20px;
+  }
+
+  .texto1 {
+
+    text-align: center;
+  }
+
+
+
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px;
+    /* largura máxima */
+    margin: 0 auto;
+    /* centraliza horizontalmente */
+    padding: 20px;
+    gap: 20px;
+
+  }
+
+
+  .card-list .card-item {
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #000;
+    transition: border 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    /* Garante empilhamento */
+    justify-content: space-between;
+    height: 100%;
+    /* Faz o item se expandir se necessário */
+    transition: transform 0.3s ease, border 0.5s ease;
+  }
+
+  .card-item .hero-btn1 {
+    margin-top: 20px;
+    border-radius: 17px;
+    text-decoration: none;
+    color: var(--secundaria);
+    border: 2px solid #8163af;
+    padding: 5px 9px;
+    background-color: #d4b8fd;
+    align-self: flex-start;
+  }
+
+
+
+  .card-list .card-item:hover {
+    transform: scale(1.05);
+    /* aumenta em 5% */
+    z-index: 1;
+    /* traz o card pra frente (caso sobreponha outros) */
+
+  }
+
+  .card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .card-item span,
+  .card-item .developer,
+  .card-item .editor,
+  .card-item .designer,
+  .card-item .tech {
+    display: inline-block !important;
+    background-color: #f7dfdf;
+    color: #b22424;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-weight: 600;
+    width: fit-content !important;
+    /* força o conteúdo a definir a largura */
+    max-width: 100%;
+  }
+
+  .card-item .developer {
+    background-color: #f7dfdf;
+    color: #b22424;
+  }
+
+  .card-item .editor {
+    background-color: #f4d6f8;
+    color: #5c205c;
+  }
+
+  .card-item .designer {
+    background-color: #fef6d3;
+    color: #5c4f20;
+  }
+
+  .card-item .tech {
+    background-color: #c2cbff;
+    color: #1c2556;
+  }
+
+
+  .card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+
+  .card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+  }
+
+  .card-list .card-item:hover .arrow {
+    background: #000;
+    color: #fff;
+  }
+
+  @media (max-width: 1200px) {
+    .card-list .card-item {
+      padding: 15px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+
+  @media screen and (max-width: 375px) {
+    .card-list {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+
+    .card-list .card-item {
+      padding: 16px;
+    }
+  }
+
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* cor escura transparente */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 900;
+    /* abaixo da sidebar, acima do conteúdo */
+  }
+
+
+
+  /* Quando o menu estiver aberto */
+  nav.open~.overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /*ABA JAVA */
+
+
+  .bemvindoc2 {
+    padding: 10px 40px;
+    text-align: left;
+  }
+
+  .javaicon {
+    width: 10vw;
+
+  }
+
+
+
+
+  .progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* novo */
+    overflow: hidden;
+  }
+
+  .progress-bar .progress {
+
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+    /* será alterado dinamicamente */
+    transition: width 0.3s ease-in-out;
+  }
+
+  .progresso {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .hero-btn1 {
+
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #8163af;
+    padding: 5px 6px;
+    background-color: #d4b8fd;
+    transition: transform 0.3s ease, border 0.5s ease;
+  }
+
+  .hero-btn1:hover {
+    transform: scale(1.19);
+  }
+
+  .btn-voltar {
+    padding: 30px;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+
+  }
+
+  .btn-voltar:hover {
+    color: #9d32af;
+  }
+

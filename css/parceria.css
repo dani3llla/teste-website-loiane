@@ -1,0 +1,275 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+background-image: url(../assets/background-codice-loiane.png);
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+
+/* alteracao  */
+
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 203px; /* Largura para desktop */
+    height: auto;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    /* Adicionado transição para o menu lateral */
+    transition: 0.5s;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.entrar {
+    display: inline-block;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 16px 34px;
+    font-size: 28px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.entrar:hover {
+    border: 1px solid #4c1a99;
+    background: #4c1a99;
+    transition: 1s;
+}
+
+.hero-btn {
+    display: inline-block;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 16px 34px;
+    font-size: 28px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: 1px solid var(--corPrincipal);
+  background: #4c1a99;
+  transition: 1s;
+}
+
+
+.caixa-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 50px; 
+}
+
+.caixa-texto h1 {
+    font-size: 80px;
+    margin-top: 20px;
+}
+
+.caixa-texto p {
+    margin: 10px 0 20px;
+    font-size: 30px;
+    color: white;
+}
+
+/* Esconde os ícones de menu por padrão em telas maiores */
+nav .fa {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ---------------------------- Media Queries para Responsividade -------------------------- */
+
+@media (max-width: 1125px) {
+    .caixa-texto h1 {
+        font-size: 60px; /* Ajuste para telas menores */
+    }
+
+    .caixa-texto p {
+        font-size: 24px; /* Ajuste para telas menores */
+    }
+
+    .entrar, .hero-btn {
+        padding: 12px 25px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 150px; /* Reduz o logo em telas menores */
+    }
+
+    .nav-links ul {
+        display: none; 
+        flex-direction: column; 
+        width: 100%;
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    .nav-links {
+      position: absolute;
+      background:  #4c1a99;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px; 
+      text-align: left;
+      z-index: 100; 
+      transition: 1s;
+    }
+
+    
+  nav .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+
+
+    .nav-links ul {
+        display: flex; /* Mostra os links dentro do menu lateral */
+    }
+
+    .nav-links ul li {
+        display: block; /* Faz os itens da lista ocuparem toda a largura */
+        margin: 25px 0;
+        padding-left: 20px;
+    }
+
+    .nav-links ul li a {
+        color: white; /* Garante que os links fiquem visíveis no menu lateral */
+        font-size: 20px;
+    }
+
+    /* Mostra os ícones de hambúrguer e fechar */
+    nav .fa-bars,
+    nav .fa-times {
+        display: block; /* Torna os ícones visíveis */
+    }
+
+    /* Ajuste para o ícone de fechar dentro do menu */
+    .nav-links .fa-times {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    .caixa-texto {
+        top: 55%; /* Ajuste o top para telas menores */
+        transform: translate(-50%, -50%);
+        margin-top: 0; /* Remova o margin-top fixo se estiver usando top/transform */
+        padding: 0 10px; /* Mais padding para o conteúdo */
+    }
+
+    .caixa-texto h1 {
+        font-size: 40px; /* Reduz o tamanho do título */
+    }
+
+    .caixa-texto p {
+        font-size: 18px; /* Reduz o tamanho do parágrafo */
+    }
+
+    .loianecodice {
+        width: 60vw; /* Ajuste o tamanho da imagem para telas menores */
+        max-width: 300px; /* Garante um tamanho máximo */
+    }
+
+    .entrar, .hero-btn {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .caixa-texto h1 {
+        font-size: 30px;
+    }
+
+    .caixa-texto p {
+        font-size: 16px;
+    }
+
+    .entrar, .hero-btn {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loiane Training</title>
+  <link rel="shortcut icon" href="assets/LogoLoiane.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/comentarios.css" />
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+  <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html"><img class="logo" src="assets/loiane-training-logo-branca.png" alt="loiane training"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="./Card Design HTML CSS/cursos copy.html">Cursos</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a class="entrar" href="./html/login.html">ENTRAR</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <div class="caixa-texto">
+      <h1>Angular, Java, Spring e mais... </h1>
+      <p>cursos online e gratuitos com certificado de participação! </p>
+      <a href="#" class="hero-btn">Saiba Mais</a>
+    </div>
+  </header>
+
+  
+  <main>
+    <section class="cursos" id="cursos">
+      <div class="container swiper">
+        <h2 class="titulo-cursos">Cursos disponíveis</h2>
+
+        <div class="wrapper">
+          <div class="card-list swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="card-image">
+                <img src="./cursosAssets/Angular.png" alt="Curso Angular" />
+                <div class="card-tag">Front-end</div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Angular</h3>
+                <p class="card-text"> Neste curso, você aprenderá a desenvolver com Angular e TypeScript, desde os
+                  conceitos básicos até a criação de uma aplicação completa com rotas e requisições ao servidor.</p>
+                <div class="card-footer">
+                  <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card-image">
+                <img src="./cursosAssets/JavaBasico.png" alt="Java Básico" />
+                <div class="card-tag">Back-end</div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Java Básico</h3>
+                <p class="card-text">Esse curso é uma introdução à programação em Java, focado em iniciantes, cobrindo
+                  desde conceitos fundamentais até tópicos intermediários de forma clara.</p>
+                <div class="card-footer">
+                  <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <div class="card-image">
+                <img src="./cursosAssets/Angular-spring.png" alt="CRUD Angular + Spring" />
+                <div class="card-tag">Full-stack</div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">CRUD Angular + Spring</h3>
+                <p class="card-text">O Curso de CRUD Angular + Spring ensina a construir uma aplicação web completa,
+                  utilizando Angular no front-end e Spring no back-end.</p>
+                <div class="card-footer">
+                </div>
+                <a href="#" class="card-button">Saiba Mais</a>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card-image">
+                <img src="./cursosAssets/Estrutura-de-dados-com-java.png" alt="Estrutura de Dados com Java" />
+                <div class="card-tag">Fundamentos de Programação</div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Estrutura de Dados com Java</h3>
+                <p class="card-text">Nesse curso vamos aprender a teoria, como podemos utilizar a estrutura de dados ou
+                  algoritmo em projetos reais, além de aprender as estruturas presentes na linguagem Java.</p>
+                <div class="card-footer">
+                </div>
+                <a href="#" class="card-button">Saiba Mais</a>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card-image">
+                <img src="./cursosAssets/JavaIntermediario.png" alt="Java Intermediário" />
+                <div class="card-tag">Back-end</div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Java Intermediário</h3>
+                <p class="card-text">O Curso de Java Intermediário é para desenvolvedores que dominam o básico e desejam
+                  aprimorar suas habilidades, preparando-os para desafios mais complexos e projetos avançados em Java.
+                </p>
+                <div class="card-footer">
+                </div>
+                <a href="#" class="card-button">Saiba Mais</a>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="card-image">
+                <img src="./cursosAssets/Phonegap.png" alt="Phonegap e Apache Cordova" />
+                <div class="card-tag">Mobile</div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Phonegap e Apache Cordova</h3>
+                <p class="card-text">Esse curso ensina a criar aplicativos móveis híbridos. O curso abrange desde a
+                  configuração do ambiente até a integração com recursos nativos do dispositivo. Ideal para desenvolver
+                  para Android e iOS de forma prática.</p>
+                <div class="card-footer">
+                </div>
+                <a href="#" class="card-button">Saiba Mais</a>
+              </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <div class="card-image">
+                <img src="./cursosAssets/ExtJS4.png" alt="Fundamentos Ext JS 4" />
+                <div class="card-tag">Front-end</div>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Fundamentos Ext JS 4</h3>
+                <p class="card-text">Neste curso, você aprenderá os conceitos fundamentais do Ext JS 4, como
+                  componentes, layouts, eventos e modelos de dados, além de explorar como construir interfaces com
+                  grids, formulários e painéis interativos. </p>
+                <div class="card-footer">
+                </div>
+                <a href="#" class="card-button">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="parceria">
+        <a href="./html/parceria.html">
+          <img class="imagemparceria" src="./assets/saiba-mais.png" alt=""></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="parceriamobile">
+        <a href="/html/parceria.html">
+          <img class="imagemparceriamobile" src="/assets/Parceria versao mobile.png" alt=""></a>
+      </div>
+    </section>
+
+
+    <section class="portal">
+      <h1>Conectando Conhecimento e Carreira</h1>
+      <p class="subt">Uma iniciativa que transforma aprendizado em crescimento profissional</p>
+
+      <div class="row">
+        <div class="portal-col">
+          <h3>Formação com propósito</h3>
+          <p>A parceria entre a Códice e a Loiane Training foca em capacitar jovens para o mercado de tecnologia,
+            promovendo inclusão, representatividade e transformação social por meio do conhecimento.</p>
+        </div>
+
+        <div class="portal-col">
+          <h3>Oportunidades reais</h3>
+          <p>Além dos cursos gratuitos, as alunas têm acesso a processos seletivos para vagas de estágio e jovem
+            aprendiz, com prioridade para ex-alunas da plataforma Loiane Training. </p>
+        </div>
+
+        <div class="portal-col">
+          <h3>Apoio para Evoluir</h3>
+          <p>Além do conteúdo técnico, a parceria oferece mentorias, desafios práticos e suporte contínuo para ajudar
+            cada aluno a crescer profissionalmente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comentarios -->
+
+    <section class="comentarios">
+      <div class="testimonial mySwiper">
+        <div class="testi-content swiper-wrapper">
+          <div class="slide swiper-slide">
+
+            <img src="./assets/juliaalvesaluna.png" alt="" class="image" />
+            <p class="comentarios-text">
+              “Ser mulher na tecnologia nem sempre é fácil, mas encontrar uma plataforma criada por outra mulher foi um
+              incentivo gigante pra mim. A Loiane me mostrou que é possível ocupar esse espaço com conhecimento e
+              confiança. O curso de Java foi meu primeiro passo, e hoje eu sigo estudando para crescer cada vez mais na
+              área.”
+            </p>
+
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+            <div class="details">
+              <span class="name">Julia Alves</span>
+              <span class="job">Ex-Aluna do curso de Java</span>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="./assets/raposito.png" alt="" class="image" />
+            <p>
+              “Aprendi muito com os cursos da Loiane, especialmente Angular e Spring. O jeito que ela estrutura os
+              projetos me ajudou a montar meu próprio portfólio e criar aplicações completas para mostrar nas
+              entrevistas. Foi o que me ajudou a me destacar no processo seletivo.”
+            </p>
+
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+            <div class="details">
+              <span class="name">Gustavo Raposo</span>
+              <span class="job">Ex-Aluno de Angular e Spring</span>
+            </div>
+          </div>
+          <div class="slide swiper-slide">
+            <img src="/assets/mulher-usando-tablet-e-fones-de-ouvido-em-casa-no-sofa.jpg" alt="" class="image" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+              saepe provident dolorem a quaerat quo error facere nihil deleniti
+              eligendi ipsum adipisci, fugit, architecto amet asperiores
+              doloremque deserunt eum nemo.
+            </p>
+
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+            <div class="details">
+              <span class="name">Marnie Lotter</span>
+              <span class="job">Web Developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  </main>
+
+  <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 127.85714285714286,169.21428571428572 255.71428571428572,188.42857142857142 366,198 C 476.2857142857143,207.57142857142858 568.9999999999999,207.5 686,188 C 803.0000000000001,168.5 944.2857142857142,129.57142857142856 1074,120 C 1203.7142857142858,110.42857142857143 1321.857142857143,130.21428571428572 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#350351" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+
+
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <img class="logofooter" src="./assets/loiane-training-logo-branca.png" alt="">
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Cursos</li>
+          <li><a href="#">Java Básico</a></li>
+          <li><a href="#">Java Intermediário</a></li>
+          <li><a href="#">Estrutura de Dados com Java</a></li>
+          <li><a href="#">Angular</a></li>
+          <li><a href="#">Phonegap e Apache Cordova</a></li>
+          <li><a href="#">CRUD Angular + Spring</a></li>
+          <li><a href="#">Fundamentos Ext JS 4</a></li>
+
+
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Inscreva-se</li>
+          <li><input type="text" placeholder="Digite seu e-mail"></li>
+          <li><input type="button" value="Inscreva-se"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2025 <a href="#">Códice.</a>Todos os direitos reservados.</span>
+        <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ----------------------TTS-------------------------------- -->
+
+  <style>
+    /* Estilo do botão flutuante */
+    #toggleReader {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0080ff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    #toggleReader.ativo {
+      background-color: #00c853;
+      /* verde quando ativo */
+    }
+
+    .tts {
+      width: 32px;
+      object-fit: contain;
+    }
+
+    /* Estilo do alerta visual */
+    .tts-alerta {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background-color: #323232;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .tts-alerta.visivel {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Destaque nos textos clicáveis */
+    .texto-tts:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      transition: text-decoration 0.3s ease;
+    }
+  </style>
+
+  <button id="toggleReader" title="Ativar leitura por clique">
+    <img class="tts" src="./cursosAssets/tts.png" alt="">
+  </button>
+
+  <div id="ttsAlerta" class="tts-alerta"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/javascript/swiper-bundle.min.js"></script>
+  <script src="./javascript/script.js"></script>
+  <script src="./javascript/comentario.js"></script>
+
+  <script>
+    let leituraAtiva = false;
+
+    const toggleBtn = document.getElementById('toggleReader');
+    const alerta = document.getElementById('ttsAlerta');
+
+    // Função para impedir que links sejam clicados
+    function bloquearLinks(event) {
+      event.preventDefault();
+    }
+
+    // Função para mostrar aviso estilizado
+    function mostrarAlerta(mensagem) {
+      alerta.textContent = mensagem;
+      alerta.classList.add('visivel');
+      setTimeout(() => {
+        alerta.classList.remove('visivel');
+      }, 3000);
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      leituraAtiva = !leituraAtiva;
+
+      const elementos = document.querySelectorAll('p, span, li, h1, h2, h3, h4, h5, h6, a');
+
+      if (leituraAtiva) {
+        elementos.forEach(el => el.classList.add('texto-tts'));
+
+        document.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', bloquearLinks);
+        });
+
+        document.body.addEventListener('click', leituraPorClique);
+
+        toggleBtn.classList.add('ativo');
+        mostrarAlerta("Leitura por clique ativada.");
+        falarMensagem("Leitura por clique ativada.");
+
+      } else {
+        elementos.forEach(el => el.classList.remove('texto-tts'));
+
+        document.querySelectorAll('a').forEach(link => {
+          link.removeEventListener('click', bloquearLinks);
+        });
+
+        document.body.removeEventListener('click', leituraPorClique);
+
+        toggleBtn.classList.remove('ativo');
+        mostrarAlerta("Leitura por clique desativada.");
+        falarMensagem("Leitura por clique desativada.");
+
+      }
+    });
+
+    function leituraPorClique(event) {
+      let selecionado = event.target;
+
+      if (selecionado.closest) {
+        const linkPai = selecionado.closest('a');
+        if (linkPai) selecionado = linkPai;
+      }
+
+      if (['BUTTON', 'INPUT', 'TEXTAREA', 'SELECT'].includes(selecionado.tagName)) return;
+
+      const texto = selecionado.innerText || selecionado.textContent;
+      if (!texto.trim()) return;
+
+      const utterance = new SpeechSynthesisUtterance(texto);
+      utterance.lang = "pt-BR";
+
+      speechSynthesis.cancel();
+      speechSynthesis.speak(utterance);
+
+      event.stopPropagation();
+      event.preventDefault();
+    }
+
+    function falarMensagem(mensagem) {
+      const aviso = new SpeechSynthesisUtterance(mensagem);
+      aviso.lang = "pt-BR";
+      speechSynthesis.cancel(); // Interrompe qualquer leitura anterior
+      speechSynthesis.speak(aviso);
+    }
+  </script>
+
+  <!-- ----------------------TTS-------------------------------- -->
+
+
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+  </script>
+
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+
+</html>

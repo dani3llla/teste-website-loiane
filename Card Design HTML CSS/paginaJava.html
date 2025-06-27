@@ -1,0 +1,347 @@
+  <!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com-->
+  <html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Menu | Side Navigation Bar</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Card Design HTML CSS/cursos.css" />
+    <link rel="stylesheet" href="../Card Design HTML CSS/java.css">
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+  </head>
+
+  <body>
+
+
+
+    <main>
+      <nav>
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name"><img class="loianecursos" src="../assets/loiane-training-logo-branca.png"
+              alt="loiane training"></span>
+        </div>
+
+
+        <div class="sidebar">
+          <div class="logo">
+            <i class="bx bx-menu menu-icon"></i>
+            <span class="logo-name"><img class="loianecursos" src="../assets/Loianetraining.png" alt=""></span>
+          </div>
+
+
+          <div class="caixa-texto">
+
+            <div class="sidebar-content">
+              <ul class="lists">
+                <h2>Voltar</h2>
+                <li class="list">
+                  <a href="../index.html" class="nav-link">
+                    <i class="bx bx-home-alt icon"></i>
+                    <span class="link">Página Inicial</span>
+                  </a>
+                </li>
+                <h2>Cursos</h2>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-message-rounded icon"></i>
+                    <span class="link">Java</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-message-rounded icon"></i>
+                    <span class="link">Angular</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-pie-chart-alt-2 icon"></i>
+                    <span class="link">Spring</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-heart icon"></i>
+                    <span class="link">Aplicações Mobile</span>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="nav-link">
+                    <i class="bx bx-folder-open icon"></i>
+                    <span class="link">Ext JS 4</span>
+                  </a>
+                </li>
+              </ul>
+
+              </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="overlay"></div>
+    </main>
+
+
+
+    <a href="../Card Design HTML CSS/cursos copy.html" class="btn-voltar" onclick="voltarPagina()">← Voltar</a>
+
+    <!-- >>>>>>>>>>>> CARD DOS CURSOS <<<<<<<<<<<< -->
+
+
+    <section class="videoaulajava">
+      <div class="page-content">
+
+        <div class="bemvindoc2">
+          <img class="javaicon" src="../cursosAssets/Javaicon.png" alt="">
+          <h1 class="texto2">Java Básico</h1>
+        </div>
+        <a href="../Card Design HTML CSS/aulaJava.html" class="hero-btn-java">Começar</a>
+        <div class="introducao">
+          <h2 class="sobrejava">Sobre o Curso</h2>
+          <p class="sobrejava sobre">O curso <strong>Java Básico e Orientação a Objetos</strong> é ideal para iniciantes
+            ou quem quer reforçar a base em Java.
+            Você aprenderá desde os conceitos iniciais até os fundamentos da Programação Orientada a Objetos, com conteúdo
+            claro, prático e acessível mesmo para quem nunca programou.
+        </div>
+
+
+    </section>
+
+    <section>
+      <h2>O que você vai aprender?</h2>
+      <ul class="lista-principal">
+        <li>Instalar e configurar o ambiente de desenvolvimento Java.</li>
+        <li>Entender a estrutura básica de um programa em Java.</li>
+        <li>Trabalhar com variáveis, tipos de dados e operadores.</li>
+        <li>Criar estruturas de decisão e repetição:
+          <ul class="sub-itens">
+            <li>if</li>
+            <li>switch</li>
+            <li>loops (for, while, do-while)</li>
+          </ul>
+        </li>
+        <li>Manipular vetores e matrizes.</li>
+        <li>Realizar depuração de código com o <strong>For each</strong> e ferramentas de debug.</li>
+        <li>Aplicar os conceitos de Programação Orientada a Objetos (POO), incluindo:
+          <ul class="sub-itens">
+            <li>Classes e Objetos</li>
+            <li>Encapsulamento</li>
+            <li>Herança</li>
+            <li>Interfaces</li>
+            <li>Polimorfismo</li>
+          </ul>
+        </li>
+        <li>Tratar erros e exceções de forma eficiente.</li>
+        <li>Baixar o código-fonte de todos os exemplos vistos em aula.</li>
+        <li>Obter um <strong>certificado de conclusão gratuito</strong> ao final do curso.</li>
+      </ul>
+    </section>
+
+
+    <!-- ......... COMEÇO DO BOTÃO DE TTS ............. -->
+    <style>
+      /* Estilo do botão flutuante */
+      #toggleReader {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #0080ff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 9999;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+      }
+
+      #toggleReader.ativo {
+        background-color: #00c853;
+        /* verde quando ativo */
+      }
+
+      .tts {
+        width: 32px;
+
+        object-fit: contain;
+      }
+
+      /* Estilo do alerta visual */
+      .tts-alerta {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        background-color: #323232;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 8px;
+        font-size: 14px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .tts-alerta.visivel {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* Destaque nos textos clicáveis */
+      .texto-tts:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: text-decoration 0.3s ease;
+      }
+    </style>
+
+    <!-- Botão de leitura -->
+    <button id="toggleReader" title="Ativar leitura por clique">
+      <img class="tts" src="../cursosAssets/tts.png" alt="">
+    </button>
+
+    <!-- Alerta de ativação/desativação -->
+    <div id="ttsAlerta" class="tts-alerta"></div>
+
+
+
+    <script>
+      let leituraAtiva = false;
+
+      const toggleBtn = document.getElementById('toggleReader');
+      const alerta = document.getElementById('ttsAlerta');
+
+      // Função para impedir que links sejam clicados
+      function bloquearLinks(event) {
+        event.preventDefault();
+      }
+
+      // Função para mostrar aviso estilizado
+      function mostrarAlerta(mensagem) {
+        alerta.textContent = mensagem;
+        alerta.classList.add('visivel');
+        setTimeout(() => {
+          alerta.classList.remove('visivel');
+        }, 3000);
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        leituraAtiva = !leituraAtiva;
+
+        const elementos = document.querySelectorAll('p, span, li, h1, h2, h3, h4, h5, h6, a');
+
+        if (leituraAtiva) {
+          elementos.forEach(el => el.classList.add('texto-tts'));
+
+          document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', bloquearLinks);
+          });
+
+          document.body.addEventListener('click', leituraPorClique);
+
+          toggleBtn.classList.add('ativo');
+          mostrarAlerta("Leitura por clique ativada.");
+          falarMensagem("Leitura por clique ativada.");
+
+        } else {
+          elementos.forEach(el => el.classList.remove('texto-tts'));
+
+          document.querySelectorAll('a').forEach(link => {
+            link.removeEventListener('click', bloquearLinks);
+          });
+
+          document.body.removeEventListener('click', leituraPorClique);
+
+          toggleBtn.classList.remove('ativo');
+          mostrarAlerta("Leitura por clique desativada.");
+          falarMensagem("Leitura por clique desativada.");
+
+        }
+      });
+
+      function leituraPorClique(event) {
+        let selecionado = event.target;
+
+        if (selecionado.closest) {
+          const linkPai = selecionado.closest('a');
+          if (linkPai) selecionado = linkPai;
+        }
+
+        if (['BUTTON', 'INPUT', 'TEXTAREA', 'SELECT'].includes(selecionado.tagName)) return;
+
+        const texto = selecionado.innerText || selecionado.textContent;
+        if (!texto.trim()) return;
+
+        const utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = "pt-BR";
+
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+
+        event.stopPropagation();
+        event.preventDefault();
+      }
+
+      function falarMensagem(mensagem) {
+        const aviso = new SpeechSynthesisUtterance(mensagem);
+        aviso.lang = "pt-BR";
+        speechSynthesis.cancel(); // Interrompe qualquer leitura anterior
+        speechSynthesis.speak(aviso);
+      }
+
+
+    </script>
+    <!-- ......... FIM DO BOTÃO DE TTS ............. -->
+
+
+
+    <script>
+      const navBar = document.querySelector("nav"),
+        menuBtns = document.querySelectorAll(".menu-icon"),
+        overlay = document.querySelector(".overlay");
+
+      menuBtns.forEach((menuBtn) => {
+        menuBtn.addEventListener("click", () => {
+          navBar.classList.toggle("open");
+        });
+      });
+
+      overlay.addEventListener("click", () => {
+        navBar.classList.remove("open");
+      });
+    </script>
+
+    <body>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
+
+    <script src="scriptjava.js"></script>
+  </body>
+
+  </html>
