@@ -16,37 +16,30 @@
 </head>
 
 <body>
-
-  
   <header>
     <nav>
-      <a href="../index.html"><img class="logo" src="../assets/loiane-training-logo-branca.png"
-          alt="logo Loiane Gronner"></a>
+      <a href="../index.html"><img class="logo" src="../assets/loiane-training-logo-branca.png" alt="loiane training"></a>
       <div class="nav-links" id="navLinks">
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
           <li><a href="#">Inicio</a></li>
-          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="../Card Design HTML CSS/cursos copy.html">Cursos</a></li>
           <li><a href="#">Sobre</a></li>
           <li><a class="entrar" href="../html/login.html">ENTRAR</a></li>
-
         </ul>
       </div>
       <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
-  </header>
-
-<main>
     <div class="caixa-texto">
       <img class="loianecodice" src="../assets/codiceXloianetraining.png" alt="">
       <h1>Loiane Training X Códice </h1>
-      <p c>Em parceria com a Loiane Training, a Códice vai oferecer vagas de estágio e jovem aprendiz exclusivas para
+      <p>Em parceria com a Loiane Training, a Códice vai oferecer vagas de estágio e jovem aprendiz exclusivas para
         mulheres ex-alunas da plataforma. As oportunidades são para atuar diretamente na consultoria, participando de
         projetos reais de redesign e inovação digital.</p>
       <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAY-Lq8dUOU42RVlYODlCNVBQV1BCOTdPTzM5MTg4Qy4u&origin=lprLink&route=shorturl"
         class="hero-btn"> Inscreva-se Agora!</a>
     </div>
-</main>
+  </header>
 
 
 
@@ -57,17 +50,19 @@
 
 
 
-    <script>
-      var navLinks = document.getElementById("navLinks");
+  <script>
+    var navLinks = document.getElementById("navLinks");
 
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
+    function showMenu() {
+      navLinks.style.right = "0";
+      document.body.classList.add('sidebar-aberta');
+    }
 
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+      document.body.classList.remove('sidebar-aberta');
+    }
+  </script>
 
 <!-- ......... COMEÇO DO BOTÃO DE TTS ............. -->
 <style>
