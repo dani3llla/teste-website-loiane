@@ -14,6 +14,12 @@
     font-family: "Poppins", sans-serif;
 }
 
+html, body {
+    /* Impede rolagem horizontal */
+    overflow-x: hidden;
+    max-width: 100vw; /* Garante que nada ultrapasse a largura da viewport */
+}
+
 body {
     background-image: url(../assets/background-codice-loiane.png);
     background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
@@ -45,6 +51,10 @@ nav {
 .nav-links {
     flex: 1;
     text-align: right;
+    /* Garante que a sidebar não cause overflow */
+    max-width: 100vw;
+    box-sizing: border-box;
+    z-index: 20; /* Sidebar abaixo dos recursos de acessibilidade */
 }
 
 .nav-links ul li {
@@ -295,4 +305,30 @@ nav .fa {
         padding: 10px 20px; /* Botões menores */
         font-size: 18px; /* Fonte menor para botões */
     }
+
+    html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    .caixa-texto, .nav-links {
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+}
+
+/* Utilitário para recursos de acessibilidade fixos no canto inferior direito */
+.acessibilidade-fixa {
+    position: fixed !important;
+    right: 16px !important;
+    bottom: 16px !important;
+    z-index: 1000 !important; /* Acima da sidebar */
+}
+
+/* Exemplo para o widget VLibras e botão de leitura por clique */
+#vlibras, .botao-leitura {
+    /* Adicione a classe .acessibilidade-fixa no HTML ou use estes estilos diretamente */
+    position: fixed !important;
+    right: 16px !important;
+    bottom: 16px !important;
+    z-index: 1000 !important;
 }
