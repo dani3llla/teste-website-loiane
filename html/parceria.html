@@ -11,15 +11,15 @@
   <!-- carrossel  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- >>>> MENU DE ACESSIBILIDADE SIENNA <<<<< -->
+    <!-- >>>> MENU DE ACESSIBILIDADE SIENNA <<<<< -->
   <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 </head>
 
 <body>
 
-
+  
   <header>
-    <nav >
+    <nav>
       <a href="../index.html"><img class="logo" src="../assets/loiane-training-logo-branca.png"
           alt="logo Loiane Gronner"></a>
       <div class="nav-links" id="navLinks">
@@ -36,38 +36,17 @@
     </nav>
   </header>
 
-  <main>
+<main>
     <div class="caixa-texto">
       <img class="loianecodice" src="../assets/codiceXloianetraining.png" alt="">
       <h1>Loiane Training X Códice </h1>
-      <p>Em parceria com a Loiane Training, a Códice vai oferecer vagas de estágio e jovem aprendiz exclusivas para
+      <p c>Em parceria com a Loiane Training, a Códice vai oferecer vagas de estágio e jovem aprendiz exclusivas para
         mulheres ex-alunas da plataforma. As oportunidades são para atuar diretamente na consultoria, participando de
         projetos reais de redesign e inovação digital.</p>
       <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAY-Lq8dUOU42RVlYODlCNVBQV1BCOTdPTzM5MTg4Qy4u&origin=lprLink&route=shorturl"
         class="hero-btn"> Inscreva-se Agora!</a>
     </div>
-  </main>
-
-
-  <script>
-    // Assumindo que você já tem um arquivo JS linkado, por exemplo, "script.js"
-    var navLinks = document.getElementById("navLinks");
-    
-    function showMenu() {
-        navLinks.style.right = "0"; // Move o menu para dentro da tela
-    }
-    
-    function hideMenu() {
-        navLinks.style.right = "-200px"; // Move o menu para fora da tela (mesma largura definida no CSS)
-    }
-  </script>
-
-  <!-- ......... COMEÇO DO BOTÃO DE TTS ............. -->
-  <style>
-
-
-
-/* Estilo para o botão "ENTRAR" */
+</main>
 
 
 
@@ -76,176 +55,192 @@
 
 
 
-    /* Estilo do botão flutuante */
-    #toggleReader {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #0080ff;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
-      cursor: pointer;
-      z-index: 9999;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-    }
-
-    #toggleReader.ativo {
-      background-color: #00c853;
-      /* verde quando ativo */
-    }
-
-    .tts {
-      width: 32px;
-
-      object-fit: contain;
-    }
-
-    /* Estilo do alerta visual */
-    .tts-alerta {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      background-color: #323232;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-size: 14px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      z-index: 9999;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    .tts-alerta.visivel {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    /* Destaque nos textos clicáveis */
-    .texto-tts:hover {
-      cursor: pointer;
-      text-decoration: underline;
-      transition: text-decoration 0.3s ease;
-    }
-  </style>
-
-  <!-- Botão de leitura -->
-  <button id="toggleReader" title="Ativar leitura por clique">
-    <img class="tts" src="../cursosAssets/tts.png" alt="">
-  </button>
-
-  <!-- Alerta de ativação/desativação -->
-  <div id="ttsAlerta" class="tts-alerta"></div>
 
 
+    <script>
+      var navLinks = document.getElementById("navLinks");
 
-  <script>
-    let leituraAtiva = false;
-
-    const toggleBtn = document.getElementById('toggleReader');
-    const alerta = document.getElementById('ttsAlerta');
-
-    // Função para impedir que links sejam clicados
-    function bloquearLinks(event) {
-      event.preventDefault();
-    }
-
-    // Função para mostrar aviso estilizado
-    function mostrarAlerta(mensagem) {
-      alerta.textContent = mensagem;
-      alerta.classList.add('visivel');
-      setTimeout(() => {
-        alerta.classList.remove('visivel');
-      }, 3000);
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      leituraAtiva = !leituraAtiva;
-
-      const elementos = document.querySelectorAll('p, span, li, h1, h2, h3, h4, h5, h6, a');
-
-      if (leituraAtiva) {
-        elementos.forEach(el => el.classList.add('texto-tts'));
-
-        document.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', bloquearLinks);
-        });
-
-        document.body.addEventListener('click', leituraPorClique);
-
-        toggleBtn.classList.add('ativo');
-        mostrarAlerta("Leitura por clique ativada.");
-        falarMensagem("Leitura por clique ativada.");
-
-      } else {
-        elementos.forEach(el => el.classList.remove('texto-tts'));
-
-        document.querySelectorAll('a').forEach(link => {
-          link.removeEventListener('click', bloquearLinks);
-        });
-
-        document.body.removeEventListener('click', leituraPorClique);
-
-        toggleBtn.classList.remove('ativo');
-        mostrarAlerta("Leitura por clique desativada.");
-        falarMensagem("Leitura por clique desativada.");
-
-      }
-    });
-
-    function leituraPorClique(event) {
-      let selecionado = event.target;
-
-      if (selecionado.closest) {
-        const linkPai = selecionado.closest('a');
-        if (linkPai) selecionado = linkPai;
+      function showMenu() {
+        navLinks.style.right = "0";
       }
 
-      if (['BUTTON', 'INPUT', 'TEXTAREA', 'SELECT'].includes(selecionado.tagName)) return;
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
 
-      const texto = selecionado.innerText || selecionado.textContent;
-      if (!texto.trim()) return;
+<!-- ......... COMEÇO DO BOTÃO DE TTS ............. -->
+<style>
+  /* Estilo do botão flutuante */
+  #toggleReader {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0080ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
 
-      const utterance = new SpeechSynthesisUtterance(texto);
-      utterance.lang = "pt-BR";
+  #toggleReader.ativo {
+    background-color: #00c853;
+    /* verde quando ativo */
+  }
 
-      speechSynthesis.cancel();
-      speechSynthesis.speak(utterance);
+  .tts {
+    width: 32px;
+ 
+    object-fit: contain;
+  }
 
-      event.stopPropagation();
-      event.preventDefault();
+  /* Estilo do alerta visual */
+  .tts-alerta {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #323232;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .tts-alerta.visivel {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Destaque nos textos clicáveis */
+  .texto-tts:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: text-decoration 0.3s ease;
+  }
+</style>
+
+<!-- Botão de leitura -->
+<button id="toggleReader" title="Ativar leitura por clique">
+  <img class="tts" src="../cursosAssets/tts.png" alt="">
+</button>
+
+<!-- Alerta de ativação/desativação -->
+<div id="ttsAlerta" class="tts-alerta"></div>
+
+
+
+<script>
+  let leituraAtiva = false;
+
+  const toggleBtn = document.getElementById('toggleReader');
+  const alerta = document.getElementById('ttsAlerta');
+
+  // Função para impedir que links sejam clicados
+  function bloquearLinks(event) {
+    event.preventDefault();
+  }
+
+  // Função para mostrar aviso estilizado
+  function mostrarAlerta(mensagem) {
+    alerta.textContent = mensagem;
+    alerta.classList.add('visivel');
+    setTimeout(() => {
+      alerta.classList.remove('visivel');
+    }, 3000);
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    leituraAtiva = !leituraAtiva;
+
+    const elementos = document.querySelectorAll('p, span, li, h1, h2, h3, h4, h5, h6, a');
+
+    if (leituraAtiva) {
+      elementos.forEach(el => el.classList.add('texto-tts'));
+
+      document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', bloquearLinks);
+      });
+
+      document.body.addEventListener('click', leituraPorClique);
+
+      toggleBtn.classList.add('ativo');
+      mostrarAlerta("Leitura por clique ativada.");
+      falarMensagem("Leitura por clique ativada.");
+
+    } else {
+      elementos.forEach(el => el.classList.remove('texto-tts'));
+
+      document.querySelectorAll('a').forEach(link => {
+        link.removeEventListener('click', bloquearLinks);
+      });
+
+      document.body.removeEventListener('click', leituraPorClique);
+
+      toggleBtn.classList.remove('ativo');
+      mostrarAlerta("Leitura por clique desativada.");
+      falarMensagem("Leitura por clique desativada.");
+
+    }
+  });
+
+  function leituraPorClique(event) {
+    let selecionado = event.target;
+
+    if (selecionado.closest) {
+      const linkPai = selecionado.closest('a');
+      if (linkPai) selecionado = linkPai;
     }
 
-    function falarMensagem(mensagem) {
-      const aviso = new SpeechSynthesisUtterance(mensagem);
-      aviso.lang = "pt-BR";
-      speechSynthesis.cancel(); // Interrompe qualquer leitura anterior
-      speechSynthesis.speak(aviso);
-    }
+    if (['BUTTON', 'INPUT', 'TEXTAREA', 'SELECT'].includes(selecionado.tagName)) return;
+
+    const texto = selecionado.innerText || selecionado.textContent;
+    if (!texto.trim()) return;
+
+    const utterance = new SpeechSynthesisUtterance(texto);
+    utterance.lang = "pt-BR";
+
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
+  function falarMensagem(mensagem) {
+    const aviso = new SpeechSynthesisUtterance(mensagem);
+    aviso.lang = "pt-BR";
+    speechSynthesis.cancel(); // Interrompe qualquer leitura anterior
+    speechSynthesis.speak(aviso);
+  }
 
 
-  </script>
-  <!-- ......... FIM DO BOTÃO DE TTS ............. -->
+</script>
+<!-- ......... FIM DO BOTÃO DE TTS ............. -->
 
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body> <!-- Fim do corpo da página -->
 
 

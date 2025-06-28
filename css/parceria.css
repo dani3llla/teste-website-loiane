@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Modak&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
+/* Define uma variável para a cor principal, facilitando a manutenção */
+:root {
+    --corPrincipal: #4c1a99;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,22 +14,21 @@
     font-family: "Poppins", sans-serif;
 }
 
-
 body {
-background-image: url(../assets/background-codice-loiane.png);
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+    background-image: url(../assets/background-codice-loiane.png);
+    background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem de fundo se repita */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da viewport */
+    display: flex; /* Adicionado para ajudar no layout geral em dispositivos móveis */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
 }
 
 header {
     width: 100%;
     position: relative;
+    z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos */
 }
-
-
-/* alteracao  */
-
 
 nav {
     display: flex;
@@ -34,15 +38,13 @@ nav {
 }
 
 .logo {
-    width: 203px; /* Largura para desktop */
+    width: 203px;
     height: auto;
 }
 
 .nav-links {
     flex: 1;
     text-align: right;
-    /* Adicionado transição para o menu lateral */
-    transition: 0.5s;
 }
 
 .nav-links ul li {
@@ -56,41 +58,70 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    white-space: nowrap; /* Evita quebra de linha em itens do menu */
 }
 
 .nav-links ul li a::after {
     content: '';
     width: 0%;
     height: 2px;
+    background: var(--corPrincipal);
     display: block;
     margin: auto;
     transition: 0.5s;
 }
 
-
 .nav-links ul li a:hover::after {
     width: 100%;
 }
 
-.entrar {
-    display: inline-block;
-    border-radius: 20px;
-    text-decoration: none;
+main {
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo do main */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do main */
+    padding: 20px; /* Adiciona padding geral para o conteúdo principal */
+}
+
+.caixa-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 900px; /* Limita a largura máxima para desktops */
     color: white;
-    border: 1px solid rgb(255, 255, 255);
-    padding: 16px 34px;
-    font-size: 28px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
+    text-align: center;
+    position: relative; /* Mudado de absolute para relative, ou remova se absolute for essencial e ajustar no media query */
+    /* top, left, transform removidos para um posicionamento mais flexível com flexbox no main */
+    /* Se a intenção é manter fixo na tela, 'position: absolute' e 'transform' são ok, mas precisam de ajuste em media queries */
+    padding: 20px; /* Adicionado padding para respiro interno */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
 
-.entrar:hover {
-    border: 1px solid #4c1a99;
-    background: #4c1a99;
-    transition: 1s;
+.loianecodice {
+    width: 100%; /* Imagem se adapta à largura do contêiner */
+    max-width: 600px; /* Limita o tamanho máximo da imagem */
+    height: auto;
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
 }
 
+.caixa-texto h1 {
+    font-size: 80px;
+    margin-top: 0; /* Removido margin-top para evitar conflitos */
+    line-height: 1.1; /* Melhora a legibilidade em várias linhas */
+    word-break: break-word; /* Quebra palavras longas para evitar overflow */
+}
+
+.caixa-texto p {
+    margin: 10px 0 20px;
+    font-size: 30px;
+    color: white;
+    line-height: 1.4; /* Melhora a legibilidade do parágrafo */
+    word-break: break-word; /* Quebra palavras longas */
+}
+
+.entrar,
 .hero-btn {
     display: inline-block;
     border-radius: 20px;
@@ -102,174 +133,166 @@ nav {
     background: transparent;
     position: relative;
     cursor: pointer;
+    transition: 1s; /* Unificado o transition para ambos os botões */
+    white-space: nowrap; /* Evita quebra de linha no texto do botão */
 }
 
+.entrar:hover,
 .hero-btn:hover {
-  border: 1px solid var(--corPrincipal);
-  background: #4c1a99;
-  transition: 1s;
+    border: 1px solid var(--corPrincipal);
+    background: var(--corPrincipal);
 }
 
-
-.caixa-texto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 90%;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    margin-top: 50px; 
-}
-
-.caixa-texto h1 {
-    font-size: 80px;
-    margin-top: 20px;
-}
-
-.caixa-texto p {
-    margin: 10px 0 20px;
-    font-size: 30px;
-    color: white;
-}
-
-/* Esconde os ícones de menu por padrão em telas maiores */
 nav .fa {
-    display: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+    display: none; /* Escondido por padrão, mostrado apenas em mobile */
 }
 
 /* ---------------------------- Media Queries para Responsividade -------------------------- */
 
+/* Telas médias (e.g., tablets em modo paisagem, laptops menores) */
 @media (max-width: 1125px) {
-    .caixa-texto h1 {
-        font-size: 60px; /* Ajuste para telas menores */
-    }
-
-    .caixa-texto p {
-        font-size: 24px; /* Ajuste para telas menores */
-    }
-
-    .entrar, .hero-btn {
-        padding: 12px 25px;
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 768px) {
     .logo {
-        width: 150px; /* Reduz o logo em telas menores */
-    }
-
-    .nav-links ul {
-        display: none; 
-        flex-direction: column; 
-        width: 100%;
-        text-align: left;
-        padding-top: 20px;
-    }
-
-    .nav-links {
-      position: absolute;
-      background:  #4c1a99;
-      height: 100vh;
-      width: 200px;
-      top: 0;
-      right: -200px; 
-      text-align: left;
-      z-index: 100; 
-      transition: 1s;
-    }
-
-    
-  nav .fa {
-    display: block;
-    color: white;
-    margin: 10px;
-    font-size: 22px;
-    cursor: pointer;
-  }
-
-  .nav-links ul {
-    padding: 30px;
-  }
-
-
-    .nav-links ul {
-        display: flex; /* Mostra os links dentro do menu lateral */
-    }
-
-    .nav-links ul li {
-        display: block; /* Faz os itens da lista ocuparem toda a largura */
-        margin: 25px 0;
-        padding-left: 20px;
+        width: 180px; /* Logo um pouco menor */
     }
 
     .nav-links ul li a {
-        color: white; /* Garante que os links fiquem visíveis no menu lateral */
-        font-size: 20px;
-    }
-
-    /* Mostra os ícones de hambúrguer e fechar */
-    nav .fa-bars,
-    nav .fa-times {
-        display: block; /* Torna os ícones visíveis */
-    }
-
-    /* Ajuste para o ícone de fechar dentro do menu */
-    .nav-links .fa-times {
-        position: absolute;
-        top: 25px;
-        right: 25px;
+        font-size: 16px; /* Fontes do menu menores */
     }
 
     .caixa-texto {
-        top: 55%; /* Ajuste o top para telas menores */
-        transform: translate(-50%, -50%);
-        margin-top: 0; /* Remova o margin-top fixo se estiver usando top/transform */
-        padding: 0 10px; /* Mais padding para o conteúdo */
-    }
-
-    .caixa-texto h1 {
-        font-size: 40px; /* Reduz o tamanho do título */
-    }
-
-    .caixa-texto p {
-        font-size: 18px; /* Reduz o tamanho do parágrafo */
+        width: 95%; /* Ocupa mais largura em telas médias */
+        gap: 15px; /* Espaçamento entre elementos um pouco menor */
+        /* top, left, transform podem ser necessários aqui se a posição absoluta for mantida */
     }
 
     .loianecodice {
-        width: 60vw; /* Ajuste o tamanho da imagem para telas menores */
-        max-width: 300px; /* Garante um tamanho máximo */
+        width: 90%; /* A imagem ocupa mais largura */
+        max-width: 500px; /* Limite ajustado */
     }
 
-    .entrar, .hero-btn {
-        padding: 10px 20px;
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
     .caixa-texto h1 {
-        font-size: 30px;
+        font-size: 60px; /* Título principal menor */
     }
 
     .caixa-texto p {
-        font-size: 16px;
+        font-size: 24px; /* Parágrafo menor */
     }
 
-    .entrar, .hero-btn {
-        padding: 8px 15px;
-        font-size: 16px;
+    .entrar,
+    .hero-btn {
+        padding: 14px 30px; /* Padding menor para botões */
+        font-size: 24px; /* Fonte menor para botões */
     }
+}
 
+/* Telas de tablet (e.g., 768px a 991px) e celulares maiores */
+@media (max-width: 768px) {
     .logo {
-        width: 120px;
+        width: 150px; /* Logo menor */
+    }
+
+    /* Esconde os links da navegação padrão e mostra o ícone do menu sanduíche */
+    .nav-links {
+        display: none;
+        position: fixed; /* Fixa o menu lateral */
+        background: var(--corPrincipal);
+        height: 100vh;
+        width: 250px; /* Largura do menu sanduíche */
+        top: 0;
+        right: -250px; /* Esconde o menu para a direita */
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s; /* Transição suave ao abrir/fechar */
+        padding-top: 60px; /* Espaço para o ícone de fechar */
+        flex-direction: column; /* Ajusta os itens do menu para ficarem em coluna */
+        justify-content: flex-start; /* Alinha itens ao topo */
+        align-items: flex-start; /* Alinha itens à esquerda */
+    }
+
+    .nav-links ul {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nav-links ul li {
+        display: block; /* Cada item do menu em uma nova linha */
+        margin: 25px 0; /* Espaçamento entre itens do menu */
+    }
+
+    .nav-links ul li a {
+        font-size: 20px; /* Fonte maior para os links no menu sanduíche */
+        color: white; /* Garante que o texto seja branco no fundo roxo */
+    }
+
+    nav .fa {
+        display: block; /* Mostra o ícone de menu (sanduíche) */
+        color: white;
+        font-size: 28px; /* Tamanho do ícone */
+        cursor: pointer;
+    }
+
+    /* Ícone de fechar o menu */
+    .fa-times {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+    }
+
+    .caixa-texto {
+        width: 100%; /* Ocupa a largura total */
+        padding: 15px; /* Mais padding para respiro */
+        gap: 10px; /* Espaçamento reduzido */
+        /* Se mantiver position: absolute no caixa-texto, ajuste as posições */
+        /* top: 50%; transform: translate(-50%, -50%); pode ser mantido se o main não estiver centralizando */
+    }
+    
+    .loianecodice {
+        width: 95%; /* A imagem ocupa quase toda a largura */
+        max-width: 400px; /* Limite ainda menor */
+    }
+
+    .caixa-texto h1 {
+        font-size: 45px; /* Título principal menor */
+    }
+
+    .caixa-texto p {
+        font-size: 20px; /* Parágrafo menor */
+    }
+
+    .entrar,
+    .hero-btn {
+        padding: 12px 25px; /* Padding menor para botões */
+        font-size: 20px; /* Fonte menor para botões */
+    }
+}
+
+/* Telas de celular menores (e.g., 320px a 480px) */
+@media (max-width: 480px) {
+    .logo {
+        width: 120px; /* Logo ainda menor */
+    }
+
+    nav {
+        padding: 3% 5%; /* Padding reduzido para a navegação */
+    }
+
+    .nav-links {
+        width: 200px; /* Menu sanduíche mais estreito */
+        right: -200px;
+    }
+
+    .caixa-texto h1 {
+        font-size: 32px; /* Título principal ainda menor para caber */
+    }
+
+    .caixa-texto p {
+        font-size: 16px; /* Parágrafo ainda menor */
+    }
+
+    .entrar,
+    .hero-btn {
+        padding: 10px 20px; /* Botões menores */
+        font-size: 18px; /* Fonte menor para botões */
     }
 }
